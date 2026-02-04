@@ -1,0 +1,1 @@
+It styles a Drupal “Focus Block” paragraph as a responsive 3-column grid of media cards (image/video with captions) plus a CTA button, with an editor-selected background color theme that automatically adjusts text, links, and hover styles for contrast.
