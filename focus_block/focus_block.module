@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function focus_block_theme($existing, $type, $theme, $path) {
+  return [
+    'paragraph__focus_block' => [
+      'base hook' => 'paragraph',
+      'template' => 'paragraph--focus-block',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_preprocess_paragraph().
+ */
+function focus_block_preprocess_paragraph(array &$variables) {
+  $paragraph = $variables['paragraph'];
+
+  if ($paragraph->bundle() === 'focus_block') {
+    $variables['#attached']['library'][] = 'focus_block/focus-block';
+
+    // Get color choice
+    if ($paragraph->hasField('field_focus_block_color')) {
+      $color_value = $paragraph->get('field_focus_block_color')->value;
+      $variables['color_class'] = $color_value ?: '';
+    }
+  }
+}

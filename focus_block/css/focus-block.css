@@ -1,0 +1,348 @@
+/* ===============================
+   FOCUS BLOCK BASE
+   =============================== */
+.focus-block {
+  padding: 60px 40px;
+  position: relative;
+}
+
+.focus-block__container {
+  max-width: 1230px;
+  margin: 0 auto;
+}
+
+/* ===============================
+   COLOR BACKGROUNDS
+   =============================== */
+
+/* Black */
+.focus-block.focus_block_black {
+  background: #000;
+  color: #fff;
+}
+
+.focus-block.focus_block_black .focus-block__title {
+  color: #fff;
+}
+
+.focus-block.focus_block_black .focus-card__caption-link {
+  color: #fff;
+  text-decoration-color: #fff;
+}
+
+.focus-block.focus_block_black .focus-block__link {
+  border-color: #fff;
+  color: #fff;
+}
+
+.focus-block.focus_block_black .focus-block__link:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* Blue */
+.focus-block.focus_block_blue {
+  background: #003c78;
+  color: #fff;
+}
+
+.focus-block.focus_block_blue .focus-block__title {
+  color: #fff;
+}
+
+.focus-block.focus_block_blue .focus-card__caption-link {
+  color: #fff;
+  text-decoration-color: #000;
+}
+
+.focus-block.focus_block_blue .focus-block__link {
+  border-color: #fff;
+  color: #fff;
+}
+
+.focus-block.focus_block_blue .focus-block__link:hover {
+  background: #fff;
+  color: #003c78;
+}
+
+/* Burgundy */
+.focus-block.focus_block_burgundy {
+  background: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.0) 50%),
+    linear-gradient(to top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.0) 50%),
+    linear-gradient(to right, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.0) 40%),
+    linear-gradient(to left, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.0) 40%),
+    #6A0C0C;
+  color: #fff;
+}
+
+.focus-block.focus_block_burgundy .focus-block__title {
+  color: #fff;
+}
+
+.focus-block.focus_block_burgundy .focus-card__caption-link {
+  color: #fff;
+  text-decoration-color: #000;
+}
+
+.focus-block.focus_block_burgundy .focus-block__link {
+  border-color: #fff;
+  color: #fff;
+}
+
+.focus-block.focus_block_burgundy .focus-block__link:hover {
+  background: #fff;
+  color: #6A0C0C;
+}
+
+/* Olive */
+.focus-block.focus_block_olive {
+  background: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.0) 50%),
+    linear-gradient(to top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.0) 50%),
+    linear-gradient(to right, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.0) 40%),
+    linear-gradient(to left, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.0) 40%),
+    #808000;
+  color: #fff;
+}
+
+.focus-block.focus_block_olive .focus-block__title {
+  color: #fff;
+}
+
+.focus-block.focus_block_olive .focus-card__caption-link {
+  color: #fff;
+  text-decoration-color: #000;
+}
+
+.focus-block.focus_block_olive .focus-block__link {
+  border-color: #fff;
+  color: #fff;
+}
+
+.focus-block.focus_block_olive .focus-block__link:hover {
+  background: #fff;
+  color: #808000;
+}
+
+/* Gray */
+.focus-block.focus_block_gray {
+  background: #808080;
+  color: #fff;
+}
+
+.focus-block.focus_block_gray .focus-block__title {
+  color: #fff;
+}
+
+.focus-block.focus_block_gray .focus-card__caption-link {
+  color: #fff;
+  text-decoration-color: #fff;
+}
+
+.focus-block.focus_block_gray .focus-block__link {
+  border-color: #000;
+  color: #fff;
+}
+
+.focus-block.focus_block_gray .focus-block__link:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* White */
+.focus-block.focus_block_white {
+  background: #f2f2f2;
+  color: #000;
+}
+
+.focus-block.focus_block_white .focus-block__title {
+  color: #000;
+}
+
+.focus-block.focus_block_white .focus-card__caption-link {
+  color: #000;
+  text-decoration-color: #000;
+}
+
+.focus-block.focus_block_white .focus-block__link {
+  border-color: #000;
+  color: #000;
+}
+
+.focus-block.focus_block_white .focus-block__link:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* ===============================
+   TITLE
+   =============================== */
+.focus-block__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 40px 0;
+  text-align: left;
+}
+
+/* ===============================
+   GRID LAYOUT
+   =============================== */
+.focus-block__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* ===============================
+   FOCUS CARD
+   =============================== */
+.focus-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.focus-card__media {
+  width: 100%;
+/*  aspect-ratio: 16 / 9; */
+  aspect-ratio: 16 / 12;
+  overflow: hidden;
+/*  background: #000; */
+  border-radius: 8px;
+}
+
+.focus-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.focus-card:hover .focus-card__media img {
+  transform: scale(1.05);
+}
+
+.focus-card__media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.focus-card__video {
+  width: 100%;
+  height: 100%;
+}
+
+.focus-card__video iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.focus-card__caption {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.focus-card__caption-link {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  transition: all 0.3s ease;
+}
+
+.focus-card__caption-link:hover {
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
+}
+
+/* ===============================
+   LINK BUTTON
+   =============================== */
+.focus-block__link-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+.focus-block__link {
+  display: inline-block;
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid;
+  background: transparent;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.focus-block__link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ===============================
+   RESPONSIVE
+   =============================== */
+@media (max-width: 1024px) {
+  .focus-block__grid {
+    gap: 25px;
+  }
+}
+
+@media (max-width: 900px) {
+  .focus-block {
+    padding: 40px 30px;
+  }
+  
+  .focus-block__title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .focus-block__grid {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .focus-block {
+    padding: 30px 20px;
+  }
+  
+  .focus-block__title {
+    font-size: 1.75rem;
+  }
+  
+  .focus-block__grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .focus-block__link {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .focus-block {
+    padding: 20px 15px;
+  }
+  
+  .focus-block__title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .focus-block__link {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+}

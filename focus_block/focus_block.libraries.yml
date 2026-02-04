@@ -1,0 +1,6 @@
+focus-block:
+  css:
+    theme:
+      css/focus-block.css: {}
+  dependencies:
+    - core/drupal

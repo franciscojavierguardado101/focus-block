@@ -1,0 +1,62 @@
+{# paragraph--focus-block.html.twig #}
+<section class="focus-block {{ color_class }}">
+  <div class="focus-block__container">
+    
+    {# Title #}
+    {% if paragraph.field_focus_block_title.value %}
+      <h2 class="focus-block__title">
+        {{ paragraph.field_focus_block_title.value }}
+      </h2>
+    {% endif %}
+
+    {# Focus Cards Grid #}
+    {% if paragraph.field_focus_card %}
+      <div class="focus-block__grid">
+        {% for item in paragraph.field_focus_card %}
+          {% set card = item.entity %}
+          <div class="focus-card">
+            
+            {# Media #}
+            {% if card.field_focus_card_media.entity %}
+              {% set media = card.field_focus_card_media.entity %}
+              <div class="focus-card__media">
+                {% if media.bundle() == 'image' and media.field_media_image.entity %}
+                  <img src="{{ file_url(media.field_media_image.entity.uri.value) }}" 
+                       alt="{{ media.field_media_image.alt }}" 
+                       loading="lazy">
+                {% elseif media.bundle() == 'remote_video' and media.field_media_oembed_video.value %}
+                  <div class="focus-card__video">
+                    {{ media.field_media_oembed_video }}
+                  </div>
+                {% elseif media.bundle() == 'video' and media.field_media_video_file.entity %}
+                  <video controls>
+                    <source src="{{ file_url(media.field_media_video_file.entity.uri.value) }}" 
+                            type="{{ media.field_media_video_file.entity.filemime.value }}">
+                  </video>
+                {% endif %}
+              </div>
+            {% endif %}
+
+            {# Caption #}
+            {% if card.field_focus_card_caption.value %}
+              <div class="focus-card__caption">
+                {{ card.field_focus_card_caption.value }}
+              </div>
+            {% endif %}
+
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {# Link Button #}
+    {% if paragraph.field_focus_block_link.uri %}
+      <div class="focus-block__link-wrapper">
+        <a href="{{ paragraph.field_focus_block_link.uri }}" class="focus-block__link">
+          {{ paragraph.field_focus_block_link.title ?: 'View All News' }}
+        </a>
+      </div>
+    {% endif %}
+
+  </div>
+</section>
